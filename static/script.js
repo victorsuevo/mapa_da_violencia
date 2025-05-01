@@ -14,9 +14,9 @@ function getMarkerColor(tipo) {
     case "Violência Sexual": return "darkred";
     case "Violência Doméstica": return "orange";
     case "Furto": return "blue";
-    case "Roubo": return "black";
-    case "Outros": return "cadetblue";
-    default: return "gray";
+    case "Roubo": return "cadetblue"; // substitui "black"
+    case "Outros": return "green"; // substitui "gray"
+    default: return "blue";
   }
 }
 
