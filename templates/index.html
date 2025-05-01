@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa de Ocorrências</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.js"></script>
+</head>
+<body>
+  <div id="mapa"></div>
+  <form id="formOcorrencia">
+    <label for="tipo">Tipo de ocorrência:</label>
+    <select id="tipo" required>
+      <option value="">Selecione</option>
+      <option value="Violência Física">Violência Física</option>
+      <option value="Violência Psicológica">Violência Psicológica</option>
+      <option value="Violência Sexual">Violência Sexual</option>
+      <option value="Violência Doméstica">Violência Doméstica</option>
+      <option value="Furto">Furto</option>
+      <option value="Roubo">Roubo</option>
+      <option value="Outros">Outros</option>
+    </select>
+
+    <label for="descricao">Descrição (opcional):</label>
+    <textarea id="descricao" rows="3"></textarea>
+
+    <input type="hidden" id="latitude" required>
+    <input type="hidden" id="longitude" required>
+
+    <button type="submit">Registrar Ocorrência</button>
+  </form>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
